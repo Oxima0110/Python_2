@@ -53,16 +53,25 @@ def account_proc():
     refil_account(num)
 
 def take_account(num:int):
+    '''
+    снятие денег со счета
+    '''
     global account
     account -= num
 
 def take_tax():
+    '''
+    снятие 10% на роскошь
+    '''
     global account
     if account > MAX_ACCAUNT:
         num = account / 100 * TAX
         take_account(num)
 
 def chek_money(num):
+    '''
+    подсчет суммы для снятия и 1,5%
+    '''
     proc = num / 100 * COMM_WITHDRAWAL
     if proc < COMM_MIN:
         num += COMM_MIN
