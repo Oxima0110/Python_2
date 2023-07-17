@@ -60,7 +60,9 @@ f1 = fractions.Fraction(a, b) + fractions.Fraction(a1, b1)
 f2 = fractions.Fraction(a, b) / fractions.Fraction(a1, b1)
 
 res_add1, res_add2 = addition(number1, number2)
+res_add = str(res_add1) + '/' + str(res_add2)
 res_div1, res_div2 = division(number1, number2)
+res_div = str(res_div1) + '/' + str(res_div2)
 
-print(f'Результат сложения = {fractions.Fraction(res_add1, res_add2)}, проверка:{f1}')
-print(f'Результат деления = {fractions.Fraction(res_div1, res_div2)}, проверка:{f2}')
+print(f'Результат сложения = {res_add}, проверка:{f1}')
+print(f'Результат деления = {res_div}, проверка:{f2}')
